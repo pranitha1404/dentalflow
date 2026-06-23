@@ -59,21 +59,16 @@ export default function CalendarSection() {
               {points.map((point, index) => (
                 <div
                   key={index}
-                  className="flex items-center gap-3 justify-center lg:justify-start"
+                  className="flex items-start gap-3 justify-center lg:justify-start"
                 >
                   <CircleCheck
-                    size={16}
+                    size={18}
                     strokeWidth={1.8}
-                    className="text-[#005659] flex-shrink-0"
+                    className="text-[#005659] flex-shrink-0 mt-1"
                   />
 
                   <span
-                    style={{
-                      fontSize: "16px",
-                      lineHeight: "24px",
-                      color: "#1B1C1C",
-                      fontWeight: 400,
-                    }}
+                    className="flex-1 text-[16px] leading-7 text-[#1B1C1C]"
                   >
                     {point}
                   </span>

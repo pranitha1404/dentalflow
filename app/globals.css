@@ -159,3 +159,12 @@ body::-webkit-scrollbar-thumb {
   background: #106965;
   border-radius: 999px;
 }
+html,
+body {
+  width: 100%;
+  overflow-x: hidden;
+}
+
+* {
+  box-sizing: border-box;
+}

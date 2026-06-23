@@ -13,7 +13,7 @@ export default function Hero() {
           <div className="order-2 lg:order-1 text-center lg:text-left">
 
             <h1
-              className="text-[#10233A] text-[34px] sm:text-[40px] lg:text-[46px]"
+              className="text-[#10233A] text-[34px] sm:text-[40px] lg:text-4xl sm:text-5xl lg:text-6xl"
               style={{
                 fontFamily: "Namdhinggo",
                 lineHeight: "1.1",

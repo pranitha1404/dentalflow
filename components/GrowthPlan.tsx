@@ -30,21 +30,21 @@ export default function GrowthPlan() {
         <div className="grid grid-cols-1 lg:grid-cols-[58%_42%] gap-12 lg:gap-16 items-center">
 
           {/* LEFT SIDE */}
-          <div className="order-2 lg:order-1 text-center lg:text-left">
+          <div className="order-2 lg:order-1">
 
             <h2
-              className="text-[#106965] font-bold text-[30px] sm:text-[36px] lg:text-[40px] leading-[1.2] mb-6 lg:mb-8"
+              className="text-[#106965] font-bold text-[30px] sm:text-[36px] lg:text-[40px] leading-[1.2] mb-6 lg:mb-8 text-center lg:text-left"
               style={{ fontFamily: "Namdhinggo" }}
             >
               Free Patient Growth Plan
             </h2>
 
-            <p className="text-[#1B1C1C] text-[16px] md:text-[18px] leading-7 md:leading-8 max-w-[520px] mx-auto lg:mx-0 mb-10 lg:mb-12">
+            <p className="text-[#1B1C1C] text-[16px] md:text-[18px] leading-7 md:leading-8 max-w-[520px] mx-auto lg:mx-0 mb-10 lg:mb-12 text-center lg:text-left">
               Get a personalized growth blueprint showing exactly where your
               practice stands and how to capture more market share.
             </p>
 
-            <h3 className="text-[18px] md:text-[19px] font-semibold mb-6 lg:mb-8">
+            <h3 className="text-[18px] md:text-[19px] font-semibold mb-6 lg:mb-8 text-center lg:text-left">
               Your blueprint includes:
             </h3>
 
@@ -52,30 +52,32 @@ export default function GrowthPlan() {
               {items.map((item, index) => (
                 <div
                   key={index}
-                  className="flex items-center gap-4 justify-center lg:justify-start"
+                  className="flex items-start gap-4"
                 >
-                  <div className="w-6 h-6 rounded-full bg-[#106965] flex items-center justify-center flex-shrink-0">
+                  <div className="w-6 h-6 min-w-[24px] rounded-full bg-[#106965] flex items-center justify-center mt-1 flex-shrink-0">
                     <Check size={14} className="text-white" />
                   </div>
 
-                  <p className="text-[15px] md:text-[16px] text-[#1B1C1C] text-left">
+                  <p className="text-[15px] md:text-[16px] text-[#1B1C1C] leading-7 text-left">
                     {item}
                   </p>
                 </div>
               ))}
             </div>
 
-            <div className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-5 sm:gap-8">
+            <div className="flex flex-col sm:flex-row items-center lg:items-center gap-5 sm:gap-8">
+
               <button className="bg-[#106965] hover:bg-[#0C5754] text-white px-8 py-4 rounded-xl shadow-lg transition whitespace-nowrap">
                 Get My Free Growth Plan
               </button>
 
               <div className="flex items-center gap-3 text-[#1B1C1C]">
                 <ShieldCheck size={20} />
-                <span className="text-[15px] md:text-[16px] whitespace-nowrap">
+                <span className="text-[15px] md:text-[16px]">
                   HIPAA Compliant Data Handling
                 </span>
               </div>
+
             </div>
 
           </div>
