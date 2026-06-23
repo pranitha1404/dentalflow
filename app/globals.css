@@ -1,0 +1,161 @@
+@import "tailwindcss";
+
+/* =========================
+   Fonts
+========================= */
+
+@font-face {
+  font-family: "Namdhinggo";
+  src: url("/fonts/Namdhinggo.ttf") format("truetype");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Jost";
+  src: url("/fonts/Jost-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "JostMedium";
+  src: url("/fonts/Jost-Medium.ttf") format("truetype");
+  font-weight: 500;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "JostBold";
+  src: url("/fonts/Jost-Bold.ttf") format("truetype");
+  font-weight: 700;
+  font-display: swap;
+}
+
+/* =========================
+   Base
+========================= */
+
+html {
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background: #ffffff;
+  color: #111827;
+  font-family: "Jost", sans-serif;
+  overflow-x: hidden;
+  width: 100%;
+  min-width: 320px;
+}
+
+/* =========================
+   Typography Helpers
+========================= */
+
+.font-heading {
+  font-family: "Namdhinggo", serif;
+}
+
+.font-jost {
+  font-family: "Jost", sans-serif;
+}
+
+.font-jost-medium {
+  font-family: "JostMedium", sans-serif;
+}
+
+.font-jost-bold {
+  font-family: "JostBold", sans-serif;
+}
+
+/* =========================
+   Global Responsive Fixes
+========================= */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+button,
+input,
+textarea,
+select {
+  font: inherit;
+}
+
+a {
+  text-decoration: none;
+}
+
+section {
+  width: 100%;
+  overflow-x: hidden;
+}
+
+/* =========================
+   Responsive Containers
+========================= */
+
+.container-custom {
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+  padding-left: 16px;
+  padding-right: 16px;
+}
+
+@media (min-width: 640px) {
+  .container-custom {
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .container-custom {
+    padding-left: 32px;
+    padding-right: 32px;
+  }
+}
+
+/* =========================
+   Prevent Layout Breaking
+========================= */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+span,
+a,
+button {
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}
+
+body::-webkit-scrollbar {
+  width: 8px;
+}
+
+body::-webkit-scrollbar-thumb {
+  background: #106965;
+  border-radius: 999px;
+}
