@@ -24,39 +24,50 @@ export default function GrowthSection() {
           <div className="order-2 lg:order-1 text-center lg:text-left flex flex-col items-center lg:items-start">
 
             {/* HEADING */}
+            {/* HEADING */}
             <h2
-              className="text-[#10233A] text-center lg:text-left"
+              className="
+    text-[#10233A]
+    text-center
+    lg:text-left
+    mb-8
+  "
               style={{
                 fontFamily: "Namdhinggo",
-                lineHeight: "1.15",
                 fontWeight: 600,
-                letterSpacing: "-1px",
+                lineHeight: "1.05",
+                letterSpacing: "-0.03em",
               }}
             >
               <span
-                className="block whitespace-nowrap"
-                style={{
-                  fontSize: "clamp(1.4rem,4vw,3.875rem)",
-                }}
+                className="
+    block
+    whitespace-nowrap
+    text-[36px]
+    sm:text-[48px]
+    md:text-[56px]
+    lg:text-[62px]
+  "
               >
                 Small Clinics Deserve
               </span>
 
               <span
                 className="
-                  block
-                  whitespace-nowrap
-                  font-black
-                  bg-gradient-to-r
-                  from-[#106965]
-                  via-[#1AA89D]
-                  to-[#48C9BE]
-                  bg-clip-text
-                  text-transparent
-                "
-                style={{
-                  fontSize: "clamp(2rem,5vw,5.25rem)",
-                }}
+    block
+    whitespace-nowrap
+    text-[46px]
+    sm:text-[45px]
+    md:text-[70px]
+    lg:text-[82px]
+    font-black
+    bg-gradient-to-r
+    from-[#106965]
+    via-[#1AA89D]
+    to-[#48C9BE]
+    bg-clip-text
+    text-transparent
+  "
               >
                 BIG GROWTH
               </span>

@@ -233,8 +233,8 @@ button {
   }
 
   h1 {
-    font-size: inherit !important;
-    line-height: inherit !important;
+    font-size: 40px !important;
+    line-height: 1.12 !important;
   }
 
   h2 {
