@@ -54,10 +54,17 @@ export default function GrowthSystem() {
         <div className="text-center mb-14 lg:mb-20">
 
           <h2
-            className="text-[#106965] font-bold leading-tight whitespace-nowrap"
+            className="
+              text-[#106965]
+              font-bold
+              leading-[1.1]
+              text-center
+              break-words
+              px-2
+            "
             style={{
               fontFamily: "Namdhinggo",
-              fontSize: "clamp(32px,5vw,54px)",
+              fontSize: "clamp(18px, 3.2vw, 54px)",
             }}
           >
             The Simple 3-Step Patient Growth System
@@ -142,7 +149,6 @@ export default function GrowthSystem() {
                   {item.description}
                 </p>
 
-                {/* Bottom Line */}
                 <div
                   className="
                     mt-8
