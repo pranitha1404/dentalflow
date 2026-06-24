@@ -43,8 +43,7 @@ export default function ProblemsSection() {
 
   return (
     <section
-      className="relative py-16 md:py-20 lg:py-[110px] overflow-hidden"
-      style={{ backgroundColor: "#F8F9F8" }}
+      className="relative py-20 lg:py-[120px] overflow-hidden bg-[#F8F9F8]"
     >
       {/* Top Border */}
       <div className="absolute top-0 left-0 w-full h-12 overflow-hidden">
@@ -58,18 +57,33 @@ export default function ProblemsSection() {
         </div>
       </div>
 
-      <div className="max-w-[1180px] mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-[1240px] mx-auto px-4 sm:px-6 lg:px-8">
 
-        <h2
-          className="text-center mb-12 md:mb-16 lg:mb-20 text-[#106965] font-bold text-[30px] sm:text-[34px] md:text-[38px] lg:text-[40px] leading-[1.2]"
-          style={{
-            fontFamily: "Namdhinggo",
-          }}
-        >
-          Does This Sound Familiar?
-        </h2>
+        {/* Heading */}
+        <div className="text-center mb-16 lg:mb-20">
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-y-12 md:gap-y-16 lg:gap-y-20 gap-x-8 lg:gap-x-16">
+          <h2
+            style={{ fontFamily: "Namdhinggo" }}
+            className="leading-none"
+          >
+            <span className="block text-[#106965] text-[38px] sm:text-[48px] md:text-[56px] lg:text-[64px]">
+              Does This Sound
+            </span>
+
+            <span className="block mt-2 text-[#106965] text-[50px] sm:text-[62px] md:text-[72px] lg:text-[82px] font-bold">
+              Familiar?
+            </span>
+          </h2>
+
+          <p className="mt-6 text-[#4B5563] text-[16px] md:text-[18px] leading-8 max-w-[650px] mx-auto">
+            Most dental clinics face these challenges before building a
+            predictable patient acquisition system.
+          </p>
+
+        </div>
+
+        {/* Problems */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-y-16 md:gap-y-20 gap-x-10 lg:gap-x-14">
 
           {problems.map((item, index) => {
             const Icon = item.icon;
@@ -77,27 +91,34 @@ export default function ProblemsSection() {
             return (
               <div
                 key={index}
-                className="max-w-[290px] mx-auto text-center"
+                className="text-center max-w-[320px] mx-auto group"
               >
-                <div className="flex justify-center mb-5 md:mb-6">
-                  <Icon
-                    size={34}
-                    strokeWidth={1.6}
-                    color="#48C9BE"
-                  />
+                {/* Icon */}
+                <div className="relative flex justify-center mb-6">
+
+                  <div className="absolute w-14 h-14 rounded-full bg-[#48C9BE]/20 blur-xl group-hover:scale-125 transition duration-500" />
+
+                  <div className="relative z-10">
+                    <Icon
+                      size={42}
+                      strokeWidth={1.7}
+                      color="#48C9BE"
+                      className="group-hover:-translate-y-2 transition duration-500"
+                    />
+                  </div>
+
                 </div>
 
-                <h3
-                  className="mb-4 text-[18px] md:text-[20px] font-bold text-black"
-                >
+                {/* Title */}
+                <h3 className="text-[22px] font-bold text-[#111827] mb-5">
                   {item.title}
                 </h3>
 
-                <p
-                  className="text-black text-[15px] md:text-[16px] leading-7 md:leading-8 font-medium"
-                >
+                {/* Text */}
+                <p className="text-[#4B5563] text-[16px] leading-8">
                   {item.text}
                 </p>
+
               </div>
             );
           })}

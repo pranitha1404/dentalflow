@@ -46,9 +46,9 @@ body {
   background: #ffffff;
   color: #111827;
   font-family: "Jost", sans-serif;
-  overflow-x: hidden;
   width: 100%;
   min-width: 320px;
+  overflow-x: hidden;
 }
 
 /* =========================
@@ -72,13 +72,17 @@ body {
 }
 
 /* =========================
-   Global Responsive Fixes
+   Global Reset
 ========================= */
 
 *,
 *::before,
 *::after {
   box-sizing: border-box;
+}
+
+* {
+  min-width: 0;
 }
 
 img,
@@ -100,15 +104,37 @@ select {
 
 a {
   text-decoration: none;
+  color: inherit;
 }
 
-section {
+/* =========================
+   Layout Protection
+========================= */
+
+section,
+main,
+header,
+footer {
   width: 100%;
   overflow-x: hidden;
 }
 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+span,
+a,
+button {
+  overflow-wrap: break-word;
+  word-break: normal;
+}
+
 /* =========================
-   Responsive Containers
+   Container Helper
 ========================= */
 
 .container-custom {
@@ -134,37 +160,31 @@ section {
 }
 
 /* =========================
-   Prevent Layout Breaking
+   Scrollbar
 ========================= */
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p,
-span,
-a,
-button {
-  word-wrap: break-word;
-  overflow-wrap: break-word;
-}
-
-body::-webkit-scrollbar {
+::-webkit-scrollbar {
   width: 8px;
 }
 
-body::-webkit-scrollbar-thumb {
+::-webkit-scrollbar-thumb {
   background: #106965;
   border-radius: 999px;
 }
-html,
-body {
-  width: 100%;
-  overflow-x: hidden;
-}
 
-* {
-  box-sizing: border-box;
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+@keyframes float {
+  0% {
+    transform: translateY(0px);
+  }
+
+  50% {
+    transform: translateY(-12px);
+  }
+
+  100% {
+    transform: translateY(0px);
+  }
 }

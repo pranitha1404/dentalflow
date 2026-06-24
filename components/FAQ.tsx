@@ -27,7 +27,7 @@ const faqs = [
 ];
 
 export default function FAQ() {
-  const [active, setActive] = useState<number | null>(0);
+  const [active, setActive] = useState<number | null>(null);
 
   return (
     <section
@@ -69,6 +69,7 @@ export default function FAQ() {
                 className="group flex items-center gap-2 border border-[#29406B] rounded-full px-8 py-4 text-[#29406B] hover:bg-[#29406B] hover:text-white transition-all duration-300"
               >
                 Explore FAQs
+
                 <ArrowRight
                   size={16}
                   className="group-hover:translate-x-1 transition"
@@ -79,44 +80,73 @@ export default function FAQ() {
 
           {/* RIGHT */}
           <div
-            className="flex flex-col gap-10 md:gap-14 lg:gap-20"
-            onMouseLeave={() => setActive(0)}
+            className="flex flex-col gap-6"
+            onMouseLeave={() => setActive(null)}
           >
             {faqs.map((faq, index) => (
               <div
                 key={index}
                 onMouseEnter={() => setActive(index)}
-                onClick={() =>
-                  setActive(active === index ? null : index)
-                }
-                className="cursor-pointer"
+                className={`
+                  rounded-[24px]
+                  border
+                  cursor-pointer
+                  overflow-hidden
+                  transition-all
+                  duration-500
+                  ${
+                    active === index
+                      ? "border-[#D7F1EC] bg-white shadow-[0_15px_40px_rgba(16,105,101,0.12)]"
+                      : "border-[#F2F4F7] bg-[#FCFDFD]"
+                  }
+                `}
               >
-                <div className="flex items-start gap-4 md:gap-5">
-                  <div className="w-7 h-7 rounded-full border border-[#29406B] flex items-center justify-center flex-shrink-0">
-                    {active === index ? (
-                      <Minus size={14} className="text-[#29406B]" />
-                    ) : (
-                      <Plus size={14} className="text-[#29406B]" />
-                    )}
-                  </div>
+                <div className="p-6 md:p-8">
 
-                  <div className="flex-1">
-                    <h3 className="text-[17px] md:text-[18px] font-semibold text-[#171C1F]">
-                      {faq.question}
-                    </h3>
+                  <div className="flex items-start gap-4">
 
                     <div
-                      className={`overflow-hidden transition-all duration-300 ${
-                        active === index
-                          ? "max-h-[250px] opacity-100 mt-5"
-                          : "max-h-0 opacity-0"
-                      }`}
+                      className={`
+                        w-9 h-9 rounded-full flex items-center justify-center flex-shrink-0 transition-all duration-300
+                        ${
+                          active === index
+                            ? "bg-[#106965] text-white"
+                            : "border border-[#29406B] text-[#29406B]"
+                        }
+                      `}
                     >
-                      <p className="text-[15px] md:text-[16px] leading-[28px] md:leading-[34px] text-[#171C1F] max-w-[620px]">
-                        {faq.answer}
-                      </p>
+                      {active === index ? (
+                        <Minus size={16} />
+                      ) : (
+                        <Plus size={16} />
+                      )}
                     </div>
+
+                    <div className="flex-1">
+
+                      <h3 className="text-[17px] md:text-[20px] font-semibold text-[#171C1F]">
+                        {faq.question}
+                      </h3>
+
+                      <div
+                        className={`
+                          overflow-hidden transition-all duration-500
+                          ${
+                            active === index
+                              ? "max-h-[300px] opacity-100 mt-5"
+                              : "max-h-0 opacity-0"
+                          }
+                        `}
+                      >
+                        <p className="text-[15px] md:text-[16px] leading-8 text-[#475569]">
+                          {faq.answer}
+                        </p>
+                      </div>
+
+                    </div>
+
                   </div>
+
                 </div>
               </div>
             ))}

@@ -31,7 +31,6 @@ const testimonials = [
 export default function Testimonials() {
   return (
     <section className="relative bg-[#FBF9F8] py-16 md:py-20 lg:py-28 overflow-hidden">
-
       {/* Scallop Border */}
       <div className="absolute top-0 left-0 w-full h-12 overflow-hidden">
         <div className="flex">
@@ -59,6 +58,9 @@ export default function Testimonials() {
             <div
               key={index}
               className="
+                h-full
+                flex
+                flex-col
                 group
                 bg-white
                 rounded-[20px]
@@ -101,7 +103,7 @@ export default function Testimonials() {
               </div>
 
               {/* Quote */}
-              <p className="text-[#000000] text-[15px] md:text-[16px] leading-8 min-h-[140px] md:min-h-[155px]">
+              <p className="flex-1 text-[#000000] text-[15px] md:text-[16px] leading-8">
                 "{item.quote}"
               </p>
 

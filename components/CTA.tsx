@@ -11,8 +11,11 @@ export default function CTASection() {
         alt="CTA Background"
         fill
         priority
-        className="object-cover"
+        className="object-cover object-center"
       />
+
+      {/* Dark Overlay (optional for better text visibility) */}
+      <div className="absolute inset-0 bg-white/10" />
 
       {/* Content */}
       <div className="relative z-10 flex min-h-[380px] md:min-h-[430px] flex-col items-center justify-center text-center px-4 sm:px-6 lg:px-8">
@@ -20,11 +23,12 @@ export default function CTASection() {
         <h2
           className="
             text-[#152B4C]
-            text-[32px]
+            text-[30px]
             sm:text-[40px]
             md:text-[48px]
             lg:text-[58px]
             leading-[1.15]
+            max-w-[1100px]
           "
           style={{
             fontFamily: "Namdhinggo",
@@ -36,7 +40,7 @@ export default function CTASection() {
           Dentist Right Now
         </h2>
 
-        <p className="mt-5 md:mt-7 text-[15px] sm:text-[16px] md:text-[18px] text-[#000000] max-w-[700px]">
+        <p className="mt-5 md:mt-7 text-[15px] sm:text-[16px] md:text-[18px] text-[#000000] max-w-[700px] leading-relaxed">
           The question is: Will they find your clinic—or your competitor&apos;s?
         </p>
 
@@ -59,8 +63,10 @@ export default function CTASection() {
             font-medium
             text-white
             shadow-[0_8px_25px_rgba(0,0,0,0.08)]
-            transition
+            transition-all
+            duration-300
             hover:bg-[#128884]
+            hover:scale-[1.02]
           "
         >
           Book My Free Patient Growth Check

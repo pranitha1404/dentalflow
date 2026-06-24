@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { Check, ShieldCheck } from "lucide-react";
+import { Check, ArrowRight } from "lucide-react";
 
 export default function GrowthPlan() {
   const items = [
@@ -12,9 +12,9 @@ export default function GrowthPlan() {
   return (
     <section
       id="pricing"
-      className="relative bg-white py-16 md:py-20 lg:py-28 overflow-hidden"
+      className="relative bg-white py-20 lg:py-32 overflow-hidden"
     >
-      {/* Top Scallop Border */}
+      {/* Top Border */}
       <div className="absolute top-0 left-0 w-full h-12 overflow-hidden">
         <div className="flex">
           {Array.from({ length: 80 }).map((_, i) => (
@@ -26,83 +26,177 @@ export default function GrowthPlan() {
         </div>
       </div>
 
-      <div className="max-w-[1180px] mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 lg:grid-cols-[58%_42%] gap-12 lg:gap-16 items-center">
+      {/* Background Glow */}
+      <div className="absolute top-20 right-0 w-[500px] h-[500px] bg-[#48C9BE]/10 rounded-full blur-[140px]" />
+      <div className="absolute bottom-0 left-0 w-[400px] h-[400px] bg-[#106965]/10 rounded-full blur-[120px]" />
 
-          {/* LEFT SIDE */}
+      <div className="max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8">
+
+        <div className="grid grid-cols-1 lg:grid-cols-[55%_45%] gap-16 items-center">
+
+          {/* LEFT CONTENT */}
           <div className="order-2 lg:order-1">
 
+            {/* HEADING */}
             <h2
-              className="text-[#106965] font-bold text-[30px] sm:text-[36px] lg:text-[40px] leading-[1.2] mb-6 lg:mb-8 text-center lg:text-left"
+              className="
+                text-center
+                lg:text-left
+                text-[#106965]
+                text-[36px]
+                sm:text-[42px]
+                md:text-[50px]
+                lg:text-[58px]
+                leading-none
+                mb-6
+                lg:whitespace-nowrap
+              "
               style={{ fontFamily: "Namdhinggo" }}
             >
               Free Patient Growth Plan
             </h2>
 
-            <p className="text-[#1B1C1C] text-[16px] md:text-[18px] leading-7 md:leading-8 max-w-[520px] mx-auto lg:mx-0 mb-10 lg:mb-12 text-center lg:text-left">
+            {/* DESCRIPTION */}
+            <p className="text-[#475569] text-[17px] leading-8 max-w-[580px] mb-10 text-center lg:text-left">
               Get a personalized growth blueprint showing exactly where your
-              practice stands and how to capture more market share.
+              practice stands, uncover hidden opportunities, and build a clear
+              path to attracting more patients consistently.
             </p>
 
-            <h3 className="text-[18px] md:text-[19px] font-semibold mb-6 lg:mb-8 text-center lg:text-left">
+            {/* SUBTITLE */}
+            <h3 className="text-[22px] font-semibold text-[#17212A] mb-8 text-center lg:text-left">
               Your blueprint includes:
             </h3>
 
-            <div className="space-y-5 mb-10 lg:mb-12">
+            {/* CHECKLIST */}
+            <div className="space-y-5 mb-12">
+
               {items.map((item, index) => (
                 <div
                   key={index}
-                  className="flex items-start gap-4"
+                  className="
+                    group
+                    flex
+                    items-center
+                    gap-4
+                    p-5
+                    rounded-2xl
+                    bg-[#F8FBFB]
+                    border
+                    border-[#E5F4F2]
+                    hover:bg-white
+                    hover:shadow-[0_15px_35px_rgba(16,105,101,0.12)]
+                    hover:-translate-y-1
+                    transition-all
+                    duration-300
+                  "
                 >
-                  <div className="w-6 h-6 min-w-[24px] rounded-full bg-[#106965] flex items-center justify-center mt-1 flex-shrink-0">
-                    <Check size={14} className="text-white" />
+                  <div className="w-11 h-11 rounded-full bg-gradient-to-r from-[#106965] to-[#48C9BE] flex items-center justify-center text-white shadow-lg flex-shrink-0">
+                    <Check size={18} />
                   </div>
 
-                  <p className="text-[15px] md:text-[16px] text-[#1B1C1C] leading-7 text-left">
+                  <p className="text-[16px] text-[#17212A] font-medium">
                     {item}
                   </p>
                 </div>
               ))}
+
             </div>
 
-            <div className="flex flex-col sm:flex-row items-center lg:items-center gap-5 sm:gap-8">
+            {/* CTA BUTTON */}
+            <div className="flex justify-center lg:justify-start">
 
-              <button className="bg-[#106965] hover:bg-[#0C5754] text-white px-8 py-4 rounded-xl shadow-lg transition whitespace-nowrap">
+              <button
+                type="button"
+                className="
+                  group
+                  bg-[#106965]
+                  hover:bg-[#0B5A56]
+                  text-white
+                  px-10
+                  py-4
+                  rounded-2xl
+                  shadow-[0_15px_35px_rgba(16,105,101,0.25)]
+                  flex
+                  items-center
+                  gap-3
+                  hover:-translate-y-1
+                  transition-all
+                  duration-300
+                "
+              >
                 Get My Free Growth Plan
+
+                <ArrowRight
+                  size={18}
+                  className="group-hover:translate-x-1 transition"
+                />
               </button>
 
-              <div className="flex items-center gap-3 text-[#1B1C1C]">
-                <ShieldCheck size={20} />
-                <span className="text-[15px] md:text-[16px]">
-                  HIPAA Compliant Data Handling
-                </span>
+            </div>
+
+          </div>
+
+          {/* RIGHT IMAGE */}
+          <div className="order-1 lg:order-2 flex justify-center">
+
+            <div className="relative">
+
+              {/* Glow Behind Image */}
+              <div className="absolute inset-0 bg-[#48C9BE]/20 blur-[120px] rounded-full" />
+
+              <Image
+                src="/images/growth-lost-patient-analysis.png"
+                alt="Growth Plan"
+                width={900}
+                height={900}
+                priority
+                className="
+                  relative
+                  z-10
+                  w-full
+                  max-w-[420px]
+                  sm:max-w-[550px]
+                  lg:max-w-[800px]
+                  h-auto
+                  object-contain
+                  hover:scale-105
+                  transition-all
+                  duration-700
+                "
+              />
+
+              {/* FLOATING CARD */}
+              <div
+                className="
+                  hidden
+                  lg:block
+                  absolute
+                  -bottom-4
+                  -left-10
+                  bg-white
+                  rounded-3xl
+                  p-5
+                  shadow-2xl
+                  border
+                  border-[#E5F4F2]
+                "
+              >
+                <div className="text-[#106965] text-3xl font-bold">
+                  +90 Days
+                </div>
+
+                <p className="text-sm text-[#475569] mt-2">
+                  Complete patient acquisition roadmap
+                </p>
               </div>
 
             </div>
 
           </div>
 
-          {/* RIGHT SIDE IMAGE */}
-          <div className="order-1 lg:order-2 flex justify-center lg:justify-end">
-            <Image
-              src="/images/growth-lost-patient-analysis.png"
-              alt="Growth Plan"
-              width={950}
-              height={950}
-              priority
-              className="
-                w-full
-                max-w-[420px]
-                sm:max-w-[550px]
-                md:max-w-[700px]
-                lg:max-w-[950px]
-                h-auto
-                object-contain
-              "
-            />
-          </div>
-
         </div>
+
       </div>
     </section>
   );

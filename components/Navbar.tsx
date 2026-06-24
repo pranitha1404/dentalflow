@@ -89,6 +89,7 @@ export default function Navbar() {
 
           {/* Mobile Menu Button */}
           <button
+            aria-label="Toggle Menu"
             onClick={() => setIsOpen(!isOpen)}
             className="lg:hidden text-[#10233A]"
           >
@@ -97,11 +98,17 @@ export default function Navbar() {
         </div>
 
         {/* Mobile Menu */}
-        {isOpen && (
+        <div
+          className={`
+            lg:hidden
+            overflow-hidden
+            transition-all
+            duration-300
+            ${isOpen ? "max-h-[400px] mt-2" : "max-h-0"}
+          `}
+        >
           <div
             className="
-              lg:hidden
-              mt-2
               rounded-[18px]
               border
               border-white/30
@@ -149,7 +156,8 @@ export default function Navbar() {
                 onClick={() => setIsOpen(false)}
                 className="
                   mt-2
-                  h-[46px]
+                  h-[48px]
+                  w-full
                   flex
                   items-center
                   justify-center
@@ -165,7 +173,7 @@ export default function Navbar() {
 
             </nav>
           </div>
-        )}
+        </div>
 
       </div>
     </header>
