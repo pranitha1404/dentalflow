@@ -55,7 +55,9 @@ export default function FAQ() {
               className="text-[#106965] text-[34px] sm:text-[42px] lg:text-[52px] leading-[1.1] mb-8"
               style={{ fontFamily: "Namdhinggo" }}
             >
-              Frequently Asked Questions
+              <span className="block whitespace-nowrap">
+                Frequently Asked Questions
+              </span>
             </h2>
 
             <p className="text-[#171C1F] text-[16px] md:text-[18px] leading-[32px] md:leading-[42px] max-w-[350px] mx-auto lg:mx-0 mb-12">

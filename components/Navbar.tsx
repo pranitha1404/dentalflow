@@ -30,7 +30,7 @@ export default function Navbar() {
           {/* Logo */}
           <a
             href="#hero"
-            className="text-[18px] md:text-[20px] font-bold text-[#10233A]"
+            className="text-[18px] md:text-[20px] font-bold text-[#10233A] whitespace-nowrap"
           >
             DentalFlow
           </a>
@@ -39,28 +39,28 @@ export default function Navbar() {
           <nav className="hidden lg:flex items-center gap-10">
             <a
               href="#services"
-              className="text-[16px] font-medium text-[#2B3440] hover:text-[#0B766E] transition"
+              className="text-[16px] font-medium text-[#2B3440] hover:text-[#0B766E] transition whitespace-nowrap"
             >
               Services
             </a>
 
             <a
               href="#case-studies"
-              className="text-[16px] font-medium text-[#2B3440] hover:text-[#0B766E] transition"
+              className="text-[16px] font-medium text-[#2B3440] hover:text-[#0B766E] transition whitespace-nowrap"
             >
               Case Studies
             </a>
 
             <a
               href="#pricing"
-              className="text-[16px] font-medium text-[#2B3440] hover:text-[#0B766E] transition"
+              className="text-[16px] font-medium text-[#2B3440] hover:text-[#0B766E] transition whitespace-nowrap"
             >
               Pricing
             </a>
 
             <a
               href="#faq"
-              className="text-[16px] font-medium text-[#2B3440] hover:text-[#0B766E] transition"
+              className="text-[16px] font-medium text-[#2B3440] hover:text-[#0B766E] transition whitespace-nowrap"
             >
               FAQ
             </a>
@@ -82,6 +82,7 @@ export default function Navbar() {
               font-medium
               hover:bg-[#08625C]
               transition
+              whitespace-nowrap
             "
           >
             Get Started
@@ -166,6 +167,7 @@ export default function Navbar() {
                   text-white
                   text-[14px]
                   font-medium
+                  whitespace-nowrap
                 "
               >
                 Get Started

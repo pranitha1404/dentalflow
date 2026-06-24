@@ -61,19 +61,19 @@ body {
 ========================= */
 
 .font-heading {
-  font-family: "Namdhinggo", serif;
+  font-family: "Namdhinggo", serif !important;
 }
 
 .font-jost {
-  font-family: "Jost", sans-serif;
+  font-family: "Jost", sans-serif !important;
 }
 
 .font-jost-medium {
-  font-family: "JostMedium", sans-serif;
+  font-family: "JostMedium", sans-serif !important;
 }
 
 .font-jost-bold {
-  font-family: "JostBold", sans-serif;
+  font-family: "JostBold", sans-serif !important;
 }
 
 /* =========================
@@ -124,12 +124,20 @@ footer {
   overflow-x: hidden;
 }
 
+/* FIXED TYPOGRAPHY */
+
 h1,
 h2,
 h3,
 h4,
 h5,
-h6,
+h6 {
+  font-family: inherit;
+  overflow-wrap: normal;
+  word-break: keep-all;
+  text-wrap: balance;
+}
+
 p,
 span,
 a,
@@ -198,6 +206,11 @@ button {
     transform: translateY(0px);
   }
 }
+
+/* =========================
+   Mobile Touch Support
+========================= */
+
 a,
 button {
   touch-action: manipulation;

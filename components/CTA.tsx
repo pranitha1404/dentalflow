@@ -4,7 +4,6 @@ import { ArrowRight } from "lucide-react";
 export default function CTASection() {
   return (
     <section className="relative min-h-[380px] md:min-h-[430px] overflow-hidden">
-
       {/* Background Image */}
       <Image
         src="/images/cta-bg.png"
@@ -14,7 +13,7 @@ export default function CTASection() {
         className="object-cover object-center"
       />
 
-      {/* Dark Overlay (optional for better text visibility) */}
+      {/* Overlay */}
       <div className="absolute inset-0 bg-white/10" />
 
       {/* Content */}
@@ -23,8 +22,8 @@ export default function CTASection() {
         <h2
           className="
             text-[#152B4C]
-            text-[30px]
-            sm:text-[40px]
+            text-[26px]
+            sm:text-[34px]
             md:text-[48px]
             lg:text-[58px]
             leading-[1.15]
@@ -35,9 +34,13 @@ export default function CTASection() {
             fontWeight: 400,
           }}
         >
-          Your Next Patient Is Looking For A
-          <br />
-          Dentist Right Now
+          <span className="block whitespace-nowrap">
+            Your Next Patient Is Looking For A
+          </span>
+
+          <span className="block">
+            Dentist Right Now
+          </span>
         </h2>
 
         <p className="mt-5 md:mt-7 text-[15px] sm:text-[16px] md:text-[18px] text-[#000000] max-w-[700px] leading-relaxed">

@@ -52,7 +52,7 @@ export default function Hero() {
             <h1
               className="
                 text-[#10233A]
-                text-[24px]
+                text-[28px]
                 sm:text-[38px]
                 md:text-[54px]
                 lg:text-[62px]
@@ -66,17 +66,23 @@ export default function Hero() {
                 letterSpacing: "-1px",
               }}
             >
-              Fill Your Empty Dental
-              <br />
-              Chairs With{" "}
-              <span className="text-[#0B766E]">
-                20–40 New
+              <span className="block whitespace-nowrap">
+                Fill Your Empty Dental
               </span>
-              <br />
-              <span className="text-[#0B766E]">
-                Patients
-              </span>{" "}
-              Every Month
+
+              <span className="block whitespace-nowrap">
+                Chairs With{" "}
+                <span className="text-[#0B766E]">
+                  20–40 New
+                </span>
+              </span>
+
+              <span className="block whitespace-nowrap">
+                <span className="text-[#0B766E]">
+                  Patients
+                </span>{" "}
+                Every Month
+              </span>
             </h1>
 
             <p

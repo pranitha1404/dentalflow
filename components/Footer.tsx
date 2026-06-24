@@ -9,7 +9,9 @@ export default function Footer() {
           <div className="text-center sm:text-left">
 
             <h3 className="text-[#171C1F] text-[16px] font-medium mb-5">
-              Dental Flow
+              <span className="whitespace-nowrap">
+                Dental Flow
+              </span>
             </h3>
 
             <p className="text-[#5D6676] text-[14px] leading-7 max-w-[260px] mx-auto sm:mx-0">
@@ -60,7 +62,9 @@ export default function Footer() {
           <div className="text-center sm:text-left">
 
             <h4 className="text-[#171C1F] text-[14px] font-medium mb-5">
-              Explore
+              <span className="whitespace-nowrap">
+                Explore
+              </span>
             </h4>
 
             <div className="flex flex-col gap-4">
@@ -94,7 +98,9 @@ export default function Footer() {
           <div className="text-center sm:text-left">
 
             <h4 className="text-[#171C1F] text-[14px] font-medium mb-5">
-              Support
+              <span className="whitespace-nowrap">
+                Support
+              </span>
             </h4>
 
             <div className="flex flex-col gap-4">
@@ -128,7 +134,7 @@ export default function Footer() {
 
         {/* Bottom Copyright */}
         <div className="mt-12 pt-6 border-t border-[#E8EEF3] text-center">
-          <p className="text-[#5D6676] text-[13px]">
+          <p className="text-[#5D6676] text-[13px] whitespace-nowrap">
             © 2026 Dental Flow. All rights reserved.
           </p>
         </div>

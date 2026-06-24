@@ -49,11 +49,12 @@ export default function GrowthPlan() {
                 lg:text-[58px]
                 leading-none
                 mb-6
-                lg:whitespace-nowrap
               "
               style={{ fontFamily: "Namdhinggo" }}
             >
-              Free Patient Growth Plan
+              <span className="block whitespace-nowrap">
+                Free Patient Growth Plan
+              </span>
             </h2>
 
             {/* DESCRIPTION */}

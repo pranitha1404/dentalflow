@@ -54,7 +54,7 @@ export default function GrowthSystem() {
         <div className="text-center mb-14 lg:mb-20">
 
           <h2
-            className="text-[#106965] font-bold leading-tight"
+            className="text-[#106965] font-bold leading-tight whitespace-nowrap"
             style={{
               fontFamily: "Namdhinggo",
               fontSize: "clamp(32px,5vw,54px)",

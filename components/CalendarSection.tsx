@@ -95,9 +95,13 @@ export default function CalendarSection() {
                 letterSpacing: "-0.96px",
               }}
             >
-              What If Your Calendar Was Full
-              <br />
-              Next Month?
+              <span className="block whitespace-nowrap">
+                What If Your Calendar Was Full
+              </span>
+
+              <span className="block whitespace-nowrap">
+                Next Month?
+              </span>
             </h2>
 
             {/* Checklist */}

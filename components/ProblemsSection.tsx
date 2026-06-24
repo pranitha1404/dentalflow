@@ -66,11 +66,11 @@ export default function ProblemsSection() {
             style={{ fontFamily: "Namdhinggo" }}
             className="leading-none"
           >
-            <span className="block text-[#106965] text-[38px] sm:text-[48px] md:text-[56px] lg:text-[64px]">
+            <span className="block whitespace-nowrap text-[#106965] text-[38px] sm:text-[48px] md:text-[56px] lg:text-[64px]">
               Does This Sound
             </span>
 
-            <span className="block mt-2 text-[#106965] text-[50px] sm:text-[62px] md:text-[72px] lg:text-[82px] font-bold">
+            <span className="block whitespace-nowrap mt-2 text-[#106965] text-[50px] sm:text-[62px] md:text-[72px] lg:text-[82px] font-bold">
               Familiar?
             </span>
           </h2>

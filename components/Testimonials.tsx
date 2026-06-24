@@ -45,11 +45,25 @@ export default function Testimonials() {
 
       <div className="max-w-[1120px] mx-auto px-4 sm:px-6 lg:px-8">
 
+        {/* Heading */}
         <h2
-          className="text-center text-[#106965] font-bold text-[30px] sm:text-[38px] md:text-[42px] lg:text-[48px] leading-[1.1] mb-12 md:mb-16"
+          className="
+            text-center
+            text-[#106965]
+            font-bold
+            text-[30px]
+            sm:text-[38px]
+            md:text-[42px]
+            lg:text-[48px]
+            leading-[1.1]
+            mb-12
+            md:mb-16
+          "
           style={{ fontFamily: "Namdhinggo" }}
         >
-          Why Dentists Choose Us
+          <span className="block whitespace-nowrap">
+            Why Dentists Choose Us
+          </span>
         </h2>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
@@ -66,7 +80,8 @@ export default function Testimonials() {
                 rounded-[20px]
                 border
                 border-[#EEF2F7]
-                p-5 md:p-6
+                p-5
+                md:p-6
                 shadow-[0_10px_40px_rgba(0,0,0,0.06)]
                 transition-all
                 duration-500
