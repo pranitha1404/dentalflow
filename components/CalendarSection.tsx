@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { CircleCheck, ArrowRight } from "lucide-react";
+import Scallop from "@/components/Scallop";
 
 export default function CalendarSection() {
   const points = [
@@ -13,13 +14,17 @@ export default function CalendarSection() {
   return (
     <section
       className="
-        relative
-        overflow-hidden
-        bg-white
-        py-[80px]
-        md:py-[100px]
-      "
+    relative
+    overflow-hidden
+    bg-white
+    pt-[120px]
+    pb-[80px]
+    md:pt-[140px]
+    md:pb-[100px]
+  "
     >
+
+      <Scallop />
       <div className="max-w-[1240px] mx-auto px-4 sm:px-6 lg:px-8">
 
         <div className="grid grid-cols-1 lg:grid-cols-[50%_50%] items-center gap-12 lg:gap-20">

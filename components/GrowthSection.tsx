@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Scallop from "@/components/Scallop";
 
 export default function GrowthSection() {
   const benefits = [
@@ -13,6 +14,10 @@ export default function GrowthSection() {
       id="services"
       className="relative overflow-hidden bg-white py-[80px] md:py-[100px]"
     >
+
+      <Scallop />
+
+      {/* Background Glow */}
       {/* Background Glow */}
       <div className="absolute top-20 left-0 w-[300px] md:w-[500px] h-[300px] md:h-[500px] bg-[#48C9BE]/10 rounded-full blur-[120px]" />
       <div className="absolute bottom-0 right-0 w-[300px] md:w-[500px] h-[300px] md:h-[500px] bg-[#106965]/10 rounded-full blur-[120px]" />
@@ -158,7 +163,7 @@ export default function GrowthSection() {
             <div className="flex flex-col sm:flex-row gap-4 mt-10 justify-center lg:justify-start w-full">
 
               <a
-                href="#pricing"
+                href="/#pricing"
                 className="
                   min-h-[54px]
                   px-8
@@ -179,7 +184,7 @@ export default function GrowthSection() {
               </a>
 
               <a
-                href="#case-studies"
+                href="/#case-studies"
                 className="
                   min-h-[54px]
                   px-8
@@ -271,5 +276,6 @@ export default function GrowthSection() {
         </div>
       </div>
     </section>
+
   );
 }

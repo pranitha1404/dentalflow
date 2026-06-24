@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import Scallop from "@/components/Scallop";
 
 export default function GrowthSystem() {
   const steps = [
@@ -30,8 +31,13 @@ export default function GrowthSystem() {
   return (
     <section
       id="case-studies"
-      className="relative overflow-hidden bg-[#FBF9F8] py-[80px] md:py-[100px]"
+      className="relative overflow-hidden bg-[#FBF9F8] pt-[120px] pb-[80px] md:pt-[140px] md:pb-[100px]"
     >
+
+      <Scallop />
+
+      {/* Background Glow */}
+      <div className="absolute top-40 left-10 w-[350px] h-[350px] bg-[#48C9BE]/10 rounded-full blur-[120px]" />
       {/* Background Glow */}
       <div className="absolute top-40 left-10 w-[350px] h-[350px] bg-[#48C9BE]/10 rounded-full blur-[120px]" />
       <div className="absolute bottom-20 right-10 w-[350px] h-[350px] bg-[#106965]/10 rounded-full blur-[120px]" />

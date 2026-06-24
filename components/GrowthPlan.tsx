@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { Check, ArrowRight } from "lucide-react";
+import Scallop from "@/components/Scallop";
 
 export default function GrowthPlan() {
   const items = [
@@ -12,8 +13,13 @@ export default function GrowthPlan() {
   return (
     <section
       id="pricing"
-      className="relative overflow-hidden bg-white py-[80px] md:py-[100px]"
+      className="relative overflow-hidden bg-white pt-[120px] pb-[80px] md:pt-[140px] md:pb-[100px]"
     >
+
+      <Scallop />
+
+      {/* Background Glow */}
+      <div className="absolute top-20 right-0 w-[400px] h-[400px] bg-[#48C9BE]/10 rounded-full blur-[120px]" />
       {/* Background Glow */}
       <div className="absolute top-20 right-0 w-[400px] h-[400px] bg-[#48C9BE]/10 rounded-full blur-[120px]" />
       <div className="absolute bottom-0 left-0 w-[350px] h-[350px] bg-[#106965]/10 rounded-full blur-[120px]" />

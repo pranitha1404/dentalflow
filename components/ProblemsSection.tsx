@@ -43,19 +43,25 @@ export default function ProblemsSection() {
 
   return (
     <section
-      className="relative py-20 lg:py-[120px] overflow-hidden bg-[#F8F9F8]"
+      id="services"
+      className="relative overflow-hidden bg-[#FBF9F8] py-[80px] md:py-[100px]"
     >
-      {/* Top Border */}
-      <div className="absolute top-0 left-0 w-full h-12 overflow-hidden">
-        <div className="flex">
-          {Array.from({ length: 80 }).map((_, i) => (
-            <div
-              key={i}
-              className="w-12 h-12 rounded-full border border-[#A1DFDA] -mt-6 flex-shrink-0"
-            />
-          ))}
-        </div>
+
+      {/* TOP SCALLOP DESIGN */}
+      <div className="absolute top-0 left-0 w-full h-[40px] overflow-hidden">
+        <div
+          className="absolute top-[-20px] left-0 w-full h-[40px] bg-repeat-x"
+          style={{
+            backgroundImage:
+              "radial-gradient(circle at 20px 20px, transparent 20px, #DDF7F4 21px, #DDF7F4 22px, transparent 23px)",
+            backgroundSize: "40px 40px",
+          }}
+        />
       </div>
+
+      {/* Background Glow */}
+      <div className="absolute top-20 left-0 w-[300px] md:w-[500px] h-[300px] md:h-[500px] bg-[#48C9BE]/10 rounded-full blur-[120px]" />
+
 
       <div className="max-w-[1240px] mx-auto px-4 sm:px-6 lg:px-8">
 
