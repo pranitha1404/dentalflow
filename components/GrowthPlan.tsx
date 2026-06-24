@@ -12,53 +12,61 @@ export default function GrowthPlan() {
   return (
     <section
       id="pricing"
-      className="relative bg-white py-20 lg:py-32 overflow-hidden"
+      className="relative overflow-hidden bg-white py-[80px] md:py-[100px]"
     >
-      {/* Top Border */}
-      <div className="absolute top-0 left-0 w-full h-12 overflow-hidden">
-        <div className="flex">
-          {Array.from({ length: 80 }).map((_, i) => (
-            <div
-              key={i}
-              className="w-12 h-12 border border-[#D7F1EC] rounded-full -mt-6 flex-shrink-0"
-            />
-          ))}
-        </div>
-      </div>
-
       {/* Background Glow */}
-      <div className="absolute top-20 right-0 w-[500px] h-[500px] bg-[#48C9BE]/10 rounded-full blur-[140px]" />
-      <div className="absolute bottom-0 left-0 w-[400px] h-[400px] bg-[#106965]/10 rounded-full blur-[120px]" />
+      <div className="absolute top-20 right-0 w-[400px] h-[400px] bg-[#48C9BE]/10 rounded-full blur-[120px]" />
+      <div className="absolute bottom-0 left-0 w-[350px] h-[350px] bg-[#106965]/10 rounded-full blur-[120px]" />
 
-      <div className="max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8">
-
-        <div className="grid grid-cols-1 lg:grid-cols-[55%_45%] gap-16 items-center">
+      <div className="max-w-[1240px] mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="grid grid-cols-1 lg:grid-cols-[55%_45%] gap-12 lg:gap-16 items-center">
 
           {/* LEFT CONTENT */}
-          <div className="order-2 lg:order-1">
+          <div
+            className="
+              order-2
+              lg:order-1
+              w-full
+              text-center
+              lg:text-left
+              mx-auto
+            "
+          >
 
             {/* HEADING */}
             <h2
               className="
-                text-center
-                lg:text-left
                 text-[#106965]
-                text-[36px]
-                sm:text-[42px]
-                md:text-[50px]
-                lg:text-[58px]
-                leading-none
                 mb-6
+                text-center
+                whitespace-nowrap
               "
-              style={{ fontFamily: "Namdhinggo" }}
+              style={{
+                fontFamily: "Namdhinggo",
+                fontWeight: 600,
+                lineHeight: "1.1",
+                letterSpacing: "-1px",
+                fontSize: "clamp(1.3rem, 4vw, 3.6rem)",
+              }}
             >
-              <span className="block whitespace-nowrap">
-                Free Patient Growth Plan
-              </span>
+              Free Patient Growth Plan
             </h2>
 
             {/* DESCRIPTION */}
-            <p className="text-[#475569] text-[17px] leading-8 max-w-[580px] mb-10 text-center lg:text-left">
+            <p
+              className="
+                text-[#475569]
+                text-[15px]
+                sm:text-[16px]
+                leading-7
+                max-w-[560px]
+                mx-auto
+                lg:mx-0
+                mb-10
+                text-center
+                lg:text-left
+              "
+            >
               Get a personalized growth blueprint showing exactly where your
               practice stands, uncover hidden opportunities, and build a clear
               path to attracting more patients consistently.
@@ -70,13 +78,12 @@ export default function GrowthPlan() {
             </h3>
 
             {/* CHECKLIST */}
-            <div className="space-y-5 mb-12">
+            <div className="space-y-5 mb-12 max-w-[560px] mx-auto lg:mx-0">
 
               {items.map((item, index) => (
                 <div
                   key={index}
                   className="
-                    group
                     flex
                     items-center
                     gap-4
@@ -87,16 +94,30 @@ export default function GrowthPlan() {
                     border-[#E5F4F2]
                     hover:bg-white
                     hover:shadow-[0_15px_35px_rgba(16,105,101,0.12)]
-                    hover:-translate-y-1
                     transition-all
                     duration-300
                   "
                 >
-                  <div className="w-11 h-11 rounded-full bg-gradient-to-r from-[#106965] to-[#48C9BE] flex items-center justify-center text-white shadow-lg flex-shrink-0">
+                  <div
+                    className="
+                      w-11
+                      h-11
+                      rounded-full
+                      bg-gradient-to-r
+                      from-[#106965]
+                      to-[#48C9BE]
+                      flex
+                      items-center
+                      justify-center
+                      text-white
+                      shadow-lg
+                      flex-shrink-0
+                    "
+                  >
                     <Check size={18} />
                   </div>
 
-                  <p className="text-[16px] text-[#17212A] font-medium">
+                  <p className="text-[14px] sm:text-[16px] text-[#17212A] font-medium leading-6 text-left">
                     {item}
                   </p>
                 </div>
@@ -110,28 +131,24 @@ export default function GrowthPlan() {
               <button
                 type="button"
                 className="
-                  group
-                  bg-[#106965]
-                  hover:bg-[#0B5A56]
-                  text-white
-                  px-10
-                  py-4
-                  rounded-2xl
-                  shadow-[0_15px_35px_rgba(16,105,101,0.25)]
+                  min-h-[54px]
+                  px-8
                   flex
                   items-center
+                  justify-center
                   gap-3
-                  hover:-translate-y-1
-                  transition-all
-                  duration-300
+                  rounded-[10px]
+                  bg-[#106965]
+                  text-white
+                  text-[16px]
+                  font-medium
+                  shadow-lg
+                  hover:bg-[#0B5A56]
+                  transition
                 "
               >
                 Get My Free Growth Plan
-
-                <ArrowRight
-                  size={18}
-                  className="group-hover:translate-x-1 transition"
-                />
+                <ArrowRight size={18} />
               </button>
 
             </div>
@@ -156,14 +173,15 @@ export default function GrowthPlan() {
                   relative
                   z-10
                   w-full
-                  max-w-[420px]
-                  sm:max-w-[550px]
+                  max-w-[280px]
+                  sm:max-w-[420px]
+                  md:max-w-[520px]
                   lg:max-w-[800px]
                   h-auto
                   object-contain
-                  hover:scale-105
                   transition-all
                   duration-700
+                  hover:scale-[1.02]
                 "
               />
 
@@ -197,7 +215,6 @@ export default function GrowthPlan() {
           </div>
 
         </div>
-
       </div>
     </section>
   );

@@ -11,45 +11,33 @@ export default function GrowthSection() {
   return (
     <section
       id="services"
-      className="relative bg-gradient-to-b from-white to-[#F8FBFB] py-20 lg:py-24 overflow-hidden"
+      className="relative overflow-hidden bg-white py-[80px] md:py-[100px]"
     >
-      {/* Top Scallop Border */}
-      <div className="absolute top-0 left-0 w-full h-14 overflow-hidden">
-        <div className="flex w-full">
-          {Array.from({ length: 60 }).map((_, i) => (
-            <div
-              key={i}
-              className="w-14 h-14 border border-[#D9F3EE] rounded-full -mt-7 flex-shrink-0"
-            />
-          ))}
-        </div>
-      </div>
-
       {/* Background Glow */}
-      <div className="absolute top-20 left-0 w-[400px] h-[400px] bg-[#48C9BE]/10 rounded-full blur-[120px]" />
-      <div className="absolute bottom-0 right-0 w-[400px] h-[400px] bg-[#106965]/10 rounded-full blur-[120px]" />
+      <div className="absolute top-20 left-0 w-[300px] md:w-[500px] h-[300px] md:h-[500px] bg-[#48C9BE]/10 rounded-full blur-[120px]" />
+      <div className="absolute bottom-0 right-0 w-[300px] md:w-[500px] h-[300px] md:h-[500px] bg-[#106965]/10 rounded-full blur-[120px]" />
 
-      <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-14">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-14 lg:gap-[120px] items-center">
+      <div className="max-w-[1240px] mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="grid grid-cols-1 lg:grid-cols-[48%_52%] items-center gap-12 lg:gap-16">
 
           {/* LEFT CONTENT */}
-          <div className="order-2 lg:order-1 text-center lg:text-left">
+          <div className="order-2 lg:order-1 text-center lg:text-left flex flex-col items-center lg:items-start">
 
             {/* HEADING */}
             <h2
-              className="mb-8 lg:mb-10 leading-none"
-              style={{ fontFamily: "Namdhinggo" }}
+              className="text-[#10233A] text-center lg:text-left"
+              style={{
+                fontFamily: "Namdhinggo",
+                lineHeight: "1.15",
+                fontWeight: 600,
+                letterSpacing: "-1px",
+              }}
             >
               <span
-                className="
-                  block
-                  whitespace-nowrap
-                  text-[#106965]
-                  text-[34px]
-                  sm:text-[46px]
-                  lg:text-[58px]
-                  font-semibold
-                "
+                className="block whitespace-nowrap"
+                style={{
+                  fontSize: "clamp(1.4rem,4vw,3.875rem)",
+                }}
               >
                 Small Clinics Deserve
               </span>
@@ -58,12 +46,7 @@ export default function GrowthSection() {
                 className="
                   block
                   whitespace-nowrap
-                  mt-2
-                  text-[58px]
-                  sm:text-[74px]
-                  lg:text-[84px]
                   font-black
-                  tracking-tight
                   bg-gradient-to-r
                   from-[#106965]
                   via-[#1AA89D]
@@ -71,13 +54,30 @@ export default function GrowthSection() {
                   bg-clip-text
                   text-transparent
                 "
+                style={{
+                  fontSize: "clamp(2rem,5vw,5.25rem)",
+                }}
               >
                 BIG GROWTH
               </span>
             </h2>
 
-            {/* TEXT */}
-            <p className="text-[#3E4949] text-[16px] sm:text-[17px] leading-8 mb-12 max-w-[560px] mx-auto lg:mx-0">
+            {/* DESCRIPTION */}
+            <p
+              className="
+                mt-6
+                md:mt-8
+                max-w-[520px]
+                mx-auto
+                lg:mx-0
+                text-center
+                lg:text-left
+                text-[#3E4949]
+                text-[16px]
+                leading-[1.7]
+                font-medium
+              "
+            >
               Whether you're running a single-chair practice or a small clinic,
               your schedule should be full. We help dentists generate a steady
               stream of qualified patient bookings using proven local patient
@@ -85,36 +85,58 @@ export default function GrowthSection() {
             </p>
 
             {/* BENEFITS */}
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-5 mb-12">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-5 mt-10 w-full max-w-[700px] mx-auto lg:mx-0">
 
               {benefits.map((item, index) => (
                 <div
                   key={index}
                   className="
-                    group
-                    h-full
-                    min-h-[80px]
+                    h-[84px]
                     flex
                     items-center
                     gap-4
-                    rounded-2xl
                     px-5
-                    py-5
+                    rounded-2xl
                     bg-white
                     border
                     border-[#DDE8E8]
                     shadow-[0_8px_25px_rgba(0,0,0,0.05)]
-                    hover:-translate-y-2
-                    hover:shadow-[0_15px_35px_rgba(16,105,101,0.15)]
                     transition-all
                     duration-300
+                    hover:-translate-y-1
+                    hover:shadow-[0_15px_35px_rgba(16,105,101,0.15)]
                   "
                 >
-                  <div className="w-10 h-10 min-w-[40px] rounded-full bg-gradient-to-r from-[#106965] to-[#48C9BE] flex items-center justify-center text-white font-bold shadow-lg">
+                  <div
+                    className="
+                      w-10
+                      h-10
+                      min-w-[40px]
+                      rounded-full
+                      bg-gradient-to-r
+                      from-[#106965]
+                      to-[#48C9BE]
+                      flex
+                      items-center
+                      justify-center
+                      text-white
+                      font-bold
+                      shadow-lg
+                    "
+                  >
                     ✓
                   </div>
 
-                  <span className="text-[15px] text-[#1B1C1C] font-medium">
+                  <span
+                    className="
+                      flex-1
+                      text-left
+                      text-[15px]
+                      font-medium
+                      text-[#1B1C1C]
+                      leading-[1.4]
+                    "
+                  >
                     {item}
                   </span>
                 </div>
@@ -122,30 +144,24 @@ export default function GrowthSection() {
             </div>
 
             {/* BUTTONS */}
-            <div className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-5 relative z-30">
+            <div className="flex flex-col sm:flex-row gap-4 mt-10 justify-center lg:justify-start w-full">
 
               <a
                 href="#pricing"
                 className="
-                  relative
-                  z-30
-                  inline-flex
+                  min-h-[54px]
+                  px-8
+                  flex
                   items-center
                   justify-center
+                  rounded-[10px]
                   bg-[#106965]
                   text-white
-                  px-8
-                  py-4
-                  rounded-xl
+                  text-[16px]
+                  font-medium
                   shadow-lg
-                  cursor-pointer
-                  touch-manipulation
-                  select-none
                   hover:bg-[#0C5652]
-                  hover:-translate-y-1
-                  active:scale-95
-                  transition-all
-                  duration-300
+                  transition
                 "
               >
                 Scale Your Practice
@@ -154,29 +170,24 @@ export default function GrowthSection() {
               <a
                 href="#case-studies"
                 className="
-                  relative
-                  z-30
-                  inline-flex
+                  min-h-[54px]
+                  px-8
+                  flex
                   items-center
                   justify-center
-                  px-8
-                  py-4
-                  rounded-xl
+                  rounded-[10px]
                   border
                   border-[#106965]
+                  bg-white
                   text-[#106965]
-                  font-semibold
-                  cursor-pointer
-                  touch-manipulation
-                  select-none
+                  text-[16px]
+                  font-medium
                   hover:bg-[#106965]
                   hover:text-white
-                  active:scale-95
-                  transition-all
-                  duration-300
+                  transition
                 "
               >
-                View Case Studies →
+                View Case Studies
               </a>
 
             </div>
@@ -186,29 +197,41 @@ export default function GrowthSection() {
           {/* RIGHT IMAGE */}
           <div className="order-1 lg:order-2 flex justify-center lg:justify-end">
 
-            <div className="relative w-full max-w-[320px] sm:max-w-[420px] md:max-w-[470px] h-[420px] sm:h-[520px] md:h-[560px]">
-
+            <div
+              className="
+                relative
+                w-full
+                max-w-[280px]
+                sm:max-w-[420px]
+                md:max-w-[520px]
+                lg:max-w-[620px]
+                h-[380px]
+                sm:h-[500px]
+                md:h-[560px]
+                lg:h-[620px]
+              "
+            >
               <Image
                 src="/images/clinic-room.png"
-                alt="Clinic"
+                alt="Clinic Room"
                 fill
                 className="
                   object-cover
-                  rounded-t-[160px]
+                  rounded-t-[140px]
                   md:rounded-t-[220px]
                   shadow-[0_20px_60px_rgba(0,0,0,0.12)]
-                  hover:scale-[1.03]
                   transition-all
                   duration-700
+                  hover:scale-[1.02]
                 "
               />
 
-              {/* FLOATING CARD */}
+              {/* Floating Card */}
               <div
                 className="
                   absolute
                   left-3
-                  md:-left-6
+                  md:left-6
                   bottom-6
                   md:bottom-12
                   bg-white
@@ -217,10 +240,11 @@ export default function GrowthSection() {
                   rounded-3xl
                   shadow-2xl
                   p-5
-                  w-[180px]
+                  w-[150px]
+                  sm:w-[180px]
                 "
               >
-                <h3 className="text-[#106965] text-[30px] font-bold">
+                <h3 className="text-[#106965] text-[28px] font-bold">
                   +45%
                 </h3>
 

@@ -27,12 +27,12 @@ const faqs = [
 ];
 
 export default function FAQ() {
-  const [active, setActive] = useState<number | null>(null);
+  const [active, setActive] = useState<number | null>(0);
 
   return (
     <section
       id="faq"
-      className="relative bg-white py-[70px] md:py-[100px] overflow-hidden"
+      className="relative bg-white py-[80px] md:py-[100px] overflow-hidden"
     >
       {/* Top Scallop Border */}
       <div className="absolute top-0 left-0 w-full h-12 overflow-hidden">
@@ -46,29 +46,67 @@ export default function FAQ() {
         </div>
       </div>
 
-      <div className="max-w-[1180px] mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 lg:grid-cols-[400px_1fr] gap-12 lg:gap-[110px] items-start">
+      <div className="max-w-[1240px] mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="grid grid-cols-1 lg:grid-cols-[420px_1fr] gap-12 lg:gap-[100px] items-start">
 
-          {/* LEFT */}
+          {/* LEFT CONTENT */}
           <div className="text-center lg:text-left">
+
+            {/* HEADING */}
             <h2
-              className="text-[#106965] text-[34px] sm:text-[42px] lg:text-[52px] leading-[1.1] mb-8"
-              style={{ fontFamily: "Namdhinggo" }}
+              className="
+                text-[#106965]
+                mb-8
+                whitespace-nowrap
+              "
+              style={{
+                fontFamily: "Namdhinggo",
+                fontWeight: 600,
+                lineHeight: "1.1",
+                letterSpacing: "-1px",
+                fontSize: "clamp(1.35rem,4vw,3.6rem)",
+              }}
             >
-              <span className="block whitespace-nowrap">
-                Frequently Asked Questions
-              </span>
+              Frequently Asked Questions
             </h2>
 
-            <p className="text-[#171C1F] text-[16px] md:text-[18px] leading-[32px] md:leading-[42px] max-w-[350px] mx-auto lg:mx-0 mb-12">
+            {/* DESCRIPTION */}
+            <p
+              className="
+                text-[#171C1F]
+                text-[15px]
+                sm:text-[16px]
+                leading-8
+                max-w-[380px]
+                mx-auto
+                lg:mx-0
+                mb-10
+              "
+            >
               Not sure what to expect, how to pay or if our system is the right
               fit for your clinic? Let us help.
             </p>
 
+            {/* BUTTON */}
             <div className="flex justify-center lg:justify-start">
               <button
                 type="button"
-                className="group flex items-center gap-2 border border-[#29406B] rounded-full px-8 py-4 text-[#29406B] hover:bg-[#29406B] hover:text-white transition-all duration-300"
+                className="
+                  group
+                  flex
+                  items-center
+                  gap-2
+                  border
+                  border-[#29406B]
+                  rounded-full
+                  px-8
+                  py-4
+                  text-[#29406B]
+                  hover:bg-[#29406B]
+                  hover:text-white
+                  transition-all
+                  duration-300
+                "
               >
                 Explore FAQs
 
@@ -78,9 +116,10 @@ export default function FAQ() {
                 />
               </button>
             </div>
+
           </div>
 
-          {/* RIGHT */}
+          {/* FAQ LIST */}
           <div
             className="flex flex-col gap-6"
             onMouseLeave={() => setActive(null)}
@@ -89,6 +128,9 @@ export default function FAQ() {
               <div
                 key={index}
                 onMouseEnter={() => setActive(index)}
+                onClick={() =>
+                  setActive(active === index ? null : index)
+                }
                 className={`
                   rounded-[24px]
                   border
@@ -109,7 +151,15 @@ export default function FAQ() {
 
                     <div
                       className={`
-                        w-9 h-9 rounded-full flex items-center justify-center flex-shrink-0 transition-all duration-300
+                        w-10
+                        h-10
+                        rounded-full
+                        flex
+                        items-center
+                        justify-center
+                        flex-shrink-0
+                        transition-all
+                        duration-300
                         ${
                           active === index
                             ? "bg-[#106965] text-white"
@@ -132,7 +182,9 @@ export default function FAQ() {
 
                       <div
                         className={`
-                          overflow-hidden transition-all duration-500
+                          overflow-hidden
+                          transition-all
+                          duration-500
                           ${
                             active === index
                               ? "max-h-[300px] opacity-100 mt-5"
