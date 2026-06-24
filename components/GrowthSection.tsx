@@ -15,7 +15,9 @@ export default function GrowthSection() {
       className="relative overflow-hidden bg-white py-[80px] md:py-[100px]"
     >
 
-      <Scallop />
+      <div className="pointer-events-none">
+        <Scallop />
+      </div>
 
       {/* Background Glow */}
       {/* Background Glow */}
@@ -163,45 +165,45 @@ export default function GrowthSection() {
             <div className="flex flex-col sm:flex-row gap-4 mt-10 justify-center lg:justify-start w-full">
 
               <a
-                href="/#pricing"
+                href="#pricing"
                 className="
-                  min-h-[54px]
-                  px-8
-                  flex
-                  items-center
-                  justify-center
-                  rounded-[10px]
-                  bg-[#106965]
-                  text-white
-                  text-[16px]
-                  font-medium
-                  shadow-lg
-                  hover:bg-[#0C5652]
-                  transition
-                "
+      min-h-[54px]
+      px-8
+      flex
+      items-center
+      justify-center
+      rounded-[10px]
+      bg-[#106965]
+      text-white
+      text-[16px]
+      font-medium
+      shadow-lg
+      hover:bg-[#0C5652]
+      transition
+    "
               >
                 Scale Your Practice
               </a>
 
               <a
-                href="/#case-studies"
+                href="#case-studies"
                 className="
-                  min-h-[54px]
-                  px-8
-                  flex
-                  items-center
-                  justify-center
-                  rounded-[10px]
-                  border
-                  border-[#106965]
-                  bg-white
-                  text-[#106965]
-                  text-[16px]
-                  font-medium
-                  hover:bg-[#106965]
-                  hover:text-white
-                  transition
-                "
+      min-h-[54px]
+      px-8
+      flex
+      items-center
+      justify-center
+      rounded-[10px]
+      border
+      border-[#106965]
+      bg-white
+      text-[#106965]
+      text-[16px]
+      font-medium
+      hover:bg-[#106965]
+      hover:text-white
+      transition
+    "
               >
                 View Case Studies
               </a>
