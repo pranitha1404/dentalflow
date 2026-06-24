@@ -38,6 +38,7 @@
 html {
   scroll-behavior: smooth;
   overflow-x: hidden;
+  -webkit-text-size-adjust: 100%;
 }
 
 body {
@@ -49,6 +50,10 @@ body {
   width: 100%;
   min-width: 320px;
   overflow-x: hidden;
+
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
 }
 
 /* =========================
@@ -175,6 +180,11 @@ button {
 ::-webkit-scrollbar-track {
   background: transparent;
 }
+
+/* =========================
+   Animations
+========================= */
+
 @keyframes float {
   0% {
     transform: translateY(0px);

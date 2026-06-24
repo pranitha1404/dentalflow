@@ -22,8 +22,8 @@ export default function Navbar() {
             rounded-[18px]
             border
             border-white/30
-            bg-white/20
-            backdrop-blur-[80px]
+            bg-white/10
+            backdrop-blur-[90px]
             shadow-[0_10px_40px_rgba(15,23,42,0.08)]
           "
         >
@@ -39,28 +39,28 @@ export default function Navbar() {
           <nav className="hidden lg:flex items-center gap-10">
             <a
               href="#services"
-              className="text-[14px] font-medium text-[#2B3440] hover:text-[#0B766E] transition"
+              className="text-[16px] font-medium text-[#2B3440] hover:text-[#0B766E] transition"
             >
               Services
             </a>
 
             <a
               href="#case-studies"
-              className="text-[14px] font-medium text-[#2B3440] hover:text-[#0B766E] transition"
+              className="text-[16px] font-medium text-[#2B3440] hover:text-[#0B766E] transition"
             >
               Case Studies
             </a>
 
             <a
               href="#pricing"
-              className="text-[14px] font-medium text-[#2B3440] hover:text-[#0B766E] transition"
+              className="text-[16px] font-medium text-[#2B3440] hover:text-[#0B766E] transition"
             >
               Pricing
             </a>
 
             <a
               href="#faq"
-              className="text-[14px] font-medium text-[#2B3440] hover:text-[#0B766E] transition"
+              className="text-[16px] font-medium text-[#2B3440] hover:text-[#0B766E] transition"
             >
               FAQ
             </a>
