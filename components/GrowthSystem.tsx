@@ -30,20 +30,8 @@ export default function GrowthSystem() {
   return (
     <section
       id="case-studies"
-      className="relative py-20 md:py-24 lg:py-32 bg-[#FBF9F8] overflow-hidden"
+      className="relative overflow-hidden bg-[#FBF9F8] py-[80px] md:py-[100px]"
     >
-      {/* Top Border */}
-      <div className="absolute top-0 left-0 w-full h-12 overflow-hidden">
-        <div className="flex">
-          {Array.from({ length: 80 }).map((_, i) => (
-            <div
-              key={i}
-              className="w-12 h-12 border border-[#D7F1EC] rounded-full -mt-6 flex-shrink-0"
-            />
-          ))}
-        </div>
-      </div>
-
       {/* Background Glow */}
       <div className="absolute top-40 left-10 w-[350px] h-[350px] bg-[#48C9BE]/10 rounded-full blur-[120px]" />
       <div className="absolute bottom-20 right-10 w-[350px] h-[350px] bg-[#106965]/10 rounded-full blur-[120px]" />
@@ -54,23 +42,19 @@ export default function GrowthSystem() {
         <div className="text-center mb-14 lg:mb-20">
 
           <h2
-            className="
-              text-[#106965]
-              font-bold
-              leading-[1.1]
-              text-center
-              break-words
-              px-2
-            "
+            className="text-[#106965] whitespace-nowrap"
             style={{
               fontFamily: "Namdhinggo",
-              fontSize: "clamp(18px, 3.2vw, 54px)",
+              fontWeight: 700,
+              lineHeight: "1.1",
+              letterSpacing: "-1px",
+              fontSize: "clamp(1.1rem, 3vw, 3.375rem)",
             }}
           >
             The Simple 3-Step Patient Growth System
           </h2>
 
-          <p className="mt-5 text-[#64748B] text-[16px] max-w-[650px] mx-auto">
+          <p className="mt-5 text-[#64748B] text-[16px] max-w-[650px] mx-auto leading-7">
             A proven framework that helps dental clinics attract more patients,
             increase bookings and grow consistently every month.
           </p>
@@ -85,46 +69,45 @@ export default function GrowthSystem() {
               key={index}
               className="
                 group
-                relative
                 overflow-hidden
                 rounded-[30px]
                 bg-white
                 border
                 border-[#E8EEF3]
                 shadow-[0_15px_45px_rgba(0,0,0,0.06)]
-                hover:-translate-y-5
-                hover:shadow-[0_30px_70px_rgba(16,105,101,0.18)]
+                hover:-translate-y-3
+                hover:shadow-[0_25px_60px_rgba(16,105,101,0.12)]
                 transition-all
                 duration-500
               "
             >
-              {/* Top Glow */}
-              <div className="absolute inset-x-0 top-0 h-1 bg-gradient-to-r from-[#106965] via-[#48C9BE] to-[#106965]" />
+              {/* Top Accent */}
+              <div className="h-[4px] bg-gradient-to-r from-[#106965] via-[#48C9BE] to-[#106965]" />
 
               {/* Image */}
-              <div className="relative overflow-hidden h-[250px]">
+              <div className="relative h-[240px] overflow-hidden">
                 <Image
                   src={item.image}
                   alt={item.title}
                   fill
                   className="
                     object-cover
-                    transition-transform
+                    transition-all
                     duration-700
-                    group-hover:scale-110
+                    group-hover:scale-105
                   "
                 />
-
-                <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent" />
               </div>
 
               {/* Content */}
-              <div className="p-7 lg:p-8">
+              <div className="p-7 lg:p-8 text-center flex flex-col items-center">
 
+                {/* Step Badge */}
                 <div
                   className="
                     inline-flex
                     items-center
+                    justify-center
                     px-4
                     py-2
                     rounded-full
@@ -141,26 +124,41 @@ export default function GrowthSystem() {
                   {item.step}
                 </div>
 
-                <h3 className="mt-6 text-[24px] font-bold text-[#17212A]">
+                {/* Title */}
+                <h3
+                  className="
+                    mt-6
+                    whitespace-nowrap
+                    text-[#17212A]
+                  "
+                  style={{
+                    fontWeight: 700,
+                    lineHeight: "1.15",
+                    letterSpacing: "-0.5px",
+                    fontSize: "clamp(1rem, 2vw, 1.5rem)",
+                  }}
+                >
                   {item.title}
                 </h3>
 
-                <p className="mt-4 text-[16px] leading-8 text-[#475569]">
+                {/* Description */}
+                <p className="mt-4 text-[16px] leading-8 text-[#475569] text-center">
                   {item.description}
                 </p>
 
+                {/* Bottom Line */}
                 <div
                   className="
                     mt-8
                     h-[4px]
                     w-0
+                    rounded-full
                     bg-gradient-to-r
                     from-[#106965]
                     to-[#48C9BE]
-                    rounded-full
-                    group-hover:w-full
                     transition-all
                     duration-700
+                    group-hover:w-full
                   "
                 />
               </div>
