@@ -121,46 +121,65 @@ export default function GrowthSection() {
             </div>
 
             {/* BUTTONS */}
-            <div className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-5">
+            <div className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-5 relative z-30">
 
-              <a
-                href="#pricing"
-                className="
-                  bg-[#106965]
-                  text-white
-                  px-8
-                  py-4
-                  rounded-xl
-                  shadow-lg
-                  hover:bg-[#0C5652]
-                  hover:-translate-y-1
-                  transition-all
-                  duration-300
-                "
-              >
-                Scale Your Practice
-              </a>
+            <a
+              href="#pricing"
+              className="
+                relative
+                z-30
+                inline-flex
+                items-center
+                justify-center
+                bg-[#106965]
+                text-white
+                px-8
+                py-4
+                rounded-xl
+                shadow-lg
+                cursor-pointer
+                touch-manipulation
+                select-none
+                hover:bg-[#0C5652]
+                hover:-translate-y-1
+                active:scale-95
+                transition-all
+                duration-300
+              "
+            >
+              Scale Your Practice
+            </a>
 
-              <a
-                href="#case-studies"
-                className="
-                  px-8
-                  py-4
-                  rounded-xl
-                  border
-                  border-[#106965]
-                  text-[#106965]
-                  font-semibold
-                  hover:bg-[#106965]
-                  hover:text-white
-                  transition-all
-                  duration-300
-                "
-              >
-                View Case Studies →
-              </a>
+            <a
+              href="#case-studies"
+              className="
+                relative
+                z-30
+                inline-flex
+                items-center
+                justify-center
+                px-8
+                py-4
+                rounded-xl
+                border
+                border-[#106965]
+                text-[#106965]
+                font-semibold
+                cursor-pointer
+                touch-manipulation
+                select-none
+                hover:bg-[#106965]
+                hover:text-white
+                active:scale-95
+                transition-all
+                duration-300
+              "
+            >
+              View Case Studies →
+            </a>
 
-            </div>
+          </div>
+
 
           </div>
 
