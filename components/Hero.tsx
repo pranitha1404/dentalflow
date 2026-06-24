@@ -52,9 +52,9 @@ export default function Hero() {
             <h1
               className="
                 text-[#10233A]
-                text-[28px]
-                sm:text-[38px]
-                md:text-[54px]
+                text-[38px]
+                sm:text-[46px]
+                md:text-[56px]
                 lg:text-[62px]
                 text-center
                 lg:text-left
@@ -63,21 +63,21 @@ export default function Hero() {
                 fontFamily: "Namdhinggo",
                 lineHeight: "1.15",
                 fontWeight: 600,
-                letterSpacing: "-1px",
+                letterSpacing: "-1.5px",
               }}
             >
-              <span className="block whitespace-nowrap">
+              <span className="block">
                 Fill Your Empty Dental
               </span>
 
-              <span className="block whitespace-nowrap">
+              <span className="block">
                 Chairs With{" "}
                 <span className="text-[#0B766E]">
                   20–40 New
                 </span>
               </span>
 
-              <span className="block whitespace-nowrap">
+              <span className="block">
                 <span className="text-[#0B766E]">
                   Patients
                 </span>{" "}

@@ -52,30 +52,30 @@ export default function FAQ() {
           {/* LEFT CONTENT */}
           <div className="text-center lg:text-left">
 
-            {/* HEADING */}
             <h2
               className="
                 text-[#106965]
                 mb-8
-                whitespace-nowrap
+                text-[34px]
+                sm:text-[42px]
+                md:text-[52px]
+                lg:text-[58px]
               "
               style={{
                 fontFamily: "Namdhinggo",
                 fontWeight: 600,
                 lineHeight: "1.1",
                 letterSpacing: "-1px",
-                fontSize: "clamp(1.35rem,4vw,3.6rem)",
               }}
             >
               Frequently Asked Questions
             </h2>
 
-            {/* DESCRIPTION */}
             <p
               className="
                 text-[#171C1F]
-                text-[15px]
-                sm:text-[16px]
+                text-[16px]
+                md:text-[17px]
                 leading-8
                 max-w-[380px]
                 mx-auto
@@ -87,7 +87,6 @@ export default function FAQ() {
               fit for your clinic? Let us help.
             </p>
 
-            {/* BUTTON */}
             <div className="flex justify-center lg:justify-start">
               <button
                 type="button"
@@ -102,6 +101,7 @@ export default function FAQ() {
                   px-8
                   py-4
                   text-[#29406B]
+                  text-[16px]
                   hover:bg-[#29406B]
                   hover:text-white
                   transition-all
@@ -145,7 +145,7 @@ export default function FAQ() {
                   }
                 `}
               >
-                <div className="p-6 md:p-8">
+                <div className="p-5 sm:p-6 md:p-8">
 
                   <div className="flex items-start gap-4">
 
@@ -174,9 +174,18 @@ export default function FAQ() {
                       )}
                     </div>
 
-                    <div className="flex-1">
+                    <div className="flex-1 min-w-0">
 
-                      <h3 className="text-[17px] md:text-[20px] font-semibold text-[#171C1F]">
+                      <h3
+                        className="
+                          text-[18px]
+                          sm:text-[20px]
+                          md:text-[22px]
+                          font-semibold
+                          text-[#171C1F]
+                          leading-[1.35]
+                        "
+                      >
                         {faq.question}
                       </h3>
 
@@ -192,7 +201,14 @@ export default function FAQ() {
                           }
                         `}
                       >
-                        <p className="text-[15px] md:text-[16px] leading-8 text-[#475569]">
+                        <p
+                          className="
+                            text-[15px]
+                            md:text-[16px]
+                            leading-7
+                            text-[#475569]
+                          "
+                        >
                           {faq.answer}
                         </p>
                       </div>

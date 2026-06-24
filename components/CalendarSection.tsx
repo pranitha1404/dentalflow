@@ -21,21 +21,22 @@ export default function CalendarSection() {
       "
     >
       <div className="max-w-[1240px] mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 lg:grid-cols-[48%_52%] items-center gap-12 lg:gap-16">
+
+        <div className="grid grid-cols-1 lg:grid-cols-[50%_50%] items-center gap-12 lg:gap-20">
 
           {/* IMAGE SIDE */}
           <div className="order-1 flex justify-center lg:justify-start">
 
             <div className="relative">
 
-              {/* Glow follows image */}
+              {/* Glow */}
               <div
                 className="
                   absolute
                   inset-0
                   bg-[#DDF7F4]
                   rounded-full
-                  blur-[120px]
+                  blur-[140px]
                   opacity-70
                   scale-110
                 "
@@ -50,7 +51,7 @@ export default function CalendarSection() {
                   relative
                   z-10
                   w-full
-                  max-w-[280px]
+                  max-w-[320px]
                   sm:max-w-[420px]
                   md:max-w-[520px]
                   lg:max-w-[620px]
@@ -63,28 +64,27 @@ export default function CalendarSection() {
                 "
               />
 
-              {/* Floating Stat Card */}
+              {/* Floating Card */}
               <div
                 className="
                   absolute
                   z-20
-                  bottom-4
-                  right-0
-                  sm:right-4
+                  bottom-10
+                  right-6
                   bg-white
-                  rounded-2xl
+                  rounded-3xl
                   border
                   border-[#E7EFEF]
-                  shadow-[0_20px_60px_rgba(0,0,0,0.12)]
-                  px-5
-                  py-4
+                  shadow-[0_25px_60px_rgba(0,0,0,0.12)]
+                  px-6
+                  py-5
                 "
               >
-                <h3 className="text-[#005659] text-[28px] font-bold">
+                <h3 className="text-[#005659] text-[40px] font-bold leading-none">
                   +42%
                 </h3>
 
-                <p className="text-[13px] text-[#4B5563] leading-5">
+                <p className="text-[14px] text-[#4B5563] leading-6 mt-2">
                   More Monthly
                   <br />
                   Bookings
@@ -98,37 +98,34 @@ export default function CalendarSection() {
           {/* CONTENT SIDE */}
           <div className="order-2 text-center lg:text-left w-full">
 
-            {/* Heading */}
+            {/* HEADING */}
             <h2
-              className="text-[#005659] mb-8"
+              className="
+                text-[#005659]
+                mb-10
+                text-[32px]
+                sm:text-[42px]
+                md:text-[54px]
+                lg:text-[62px]
+              "
               style={{
                 fontFamily: "Namdhinggo",
                 fontWeight: 600,
-                lineHeight: "1.1",
+                lineHeight: "1.05",
                 letterSpacing: "-1px",
               }}
             >
-              <span
-                className="block whitespace-nowrap"
-                style={{
-                  fontSize: "clamp(1.3rem,4vw,3.875rem)",
-                }}
-              >
+              <span className="block">
                 What If Your Calendar Was Full
               </span>
 
-              <span
-                className="block"
-                style={{
-                  fontSize: "clamp(1.3rem,4vw,3.875rem)",
-                }}
-              >
+              <span className="block">
                 Next Month?
               </span>
             </h2>
 
-            {/* Checklist */}
-            <div className="space-y-4 mt-10 mb-10 max-w-[560px] mx-auto lg:mx-0">
+            {/* CHECKLIST */}
+            <div className="space-y-5 mb-12 max-w-[560px] mx-auto lg:mx-0">
 
               {points.map((point, index) => (
                 <div
@@ -137,8 +134,8 @@ export default function CalendarSection() {
                     flex
                     items-center
                     gap-4
-                    p-4
-                    rounded-xl
+                    p-5
+                    rounded-2xl
                     bg-white
                     border
                     border-[#E7EFEF]
@@ -154,17 +151,18 @@ export default function CalendarSection() {
                     className="text-[#005659] flex-shrink-0"
                   />
 
-                  <span className="text-[14px] sm:text-[16px] text-[#1B1C1C] text-left leading-6">
+                  <span className="text-[16px] text-[#1B1C1C] text-left leading-7">
                     {point}
                   </span>
                 </div>
               ))}
+
             </div>
 
-            {/* CTA Area */}
+            {/* CTA */}
             <div className="border-t border-[#D9E3E3] pt-8 max-w-[560px] mx-auto lg:mx-0">
 
-              <p className="mb-6 text-[#005659] text-[15px] leading-7">
+              <p className="mb-8 text-[#005659] text-[16px] leading-7">
                 That's exactly what our Patient Growth System is designed to
                 create.
               </p>
@@ -174,20 +172,22 @@ export default function CalendarSection() {
                 <a
                   href="#pricing"
                   className="
-                    min-h-[54px]
+                    min-h-[56px]
                     px-8
                     flex
                     items-center
                     justify-center
                     gap-3
-                    rounded-[10px]
+                    rounded-xl
                     bg-[#005659]
                     text-white
                     text-[16px]
                     font-medium
                     shadow-lg
                     hover:bg-[#00484A]
-                    transition
+                    hover:scale-[1.02]
+                    transition-all
+                    duration-300
                   "
                 >
                   <span>Start Growing Today</span>
@@ -201,6 +201,7 @@ export default function CalendarSection() {
           </div>
 
         </div>
+
       </div>
     </section>
   );
